@@ -51,7 +51,7 @@ public class WriteSDfileActivity extends BaseActivity implements View.OnClickLis
 
         nei_txt.setText("内部存储空间 ：" + Formatter.formatFileSize(this, dataSize));
         wai_txt.setText("外部存储空间 ：" + Formatter.formatFileSize(this, sdSize));
-        btn_del_sd.setEnabled(false);
+        btn_del_sd.setEnabled(false);//未相关还权限，初始化按键不可被点击
         btn_write.setOnClickListener(this);
         btn_del_sd.setOnClickListener(this);
     }
@@ -63,9 +63,11 @@ public class WriteSDfileActivity extends BaseActivity implements View.OnClickLis
             performCodeWithPermission("写入文件到sd卡权限", new PermissionCallback() {
                 @Override
                 public void hasPermission() {
+                    //检查是否有sd卡，是否挂载
                     if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                         File sdspace = Environment.getExternalStorageDirectory();
                         if (sdspace.getFreeSpace() > 5 * 1024 * 1024) {
+                            //写文件
                             File file = new File(Environment.getExternalStorageDirectory(), "Test_test.3gp");
                             try {
                                 FileOutputStream fos = new FileOutputStream(file);
@@ -97,6 +99,7 @@ public class WriteSDfileActivity extends BaseActivity implements View.OnClickLis
                 }
             }, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
         } else if (v == btn_del_sd) {
+            //删除文件
             File file = new File(Environment.getExternalStorageDirectory(), "Test_test.3gp");
             if (file.exists()){
                 file.delete();

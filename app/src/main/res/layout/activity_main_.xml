@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:layout_margin="5dp">
 
-
     <Button
         android:id="@+id/call_phone"
         android:layout_width="match_parent"
@@ -45,6 +44,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="文件"
+        android:textSize="15dp"/>
+    <Button
+        android:id="@+id/btn_xml_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="xml解析"
         android:textSize="15dp"/>
 
 </LinearLayout>

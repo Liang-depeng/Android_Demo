@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -23,26 +23,38 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".callphone.CallphoneActivity" android:launchMode="singleTask"
+            android:name=".callphone.CallphoneActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".sendmessage.SendMessageActivity" android:launchMode="singleTask"
+            android:name=".sendmessage.SendMessageActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".zidingyikj.circle" android:launchMode="singleTask"
+            android:name=".zidingyikj.circle"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".qqlogin.QQLogin_Activity" android:launchMode="singleTask"
+            android:name=".qqlogin.QQLogin_Activity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".utils.BaseActivity" android:launchMode="singleTask"
+            android:name=".utils.BaseActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".wrisesdfile.WriteSDfileActivity" android:launchMode="singleTask"
+            android:name=".wrisesdfile.WriteSDfileActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-        <activity android:name=".wrisesdfile.WriteActivity" android:launchMode="singleTask">
+        <activity
+            android:name=".wrisesdfile.WriteActivity"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".xml_.XmlActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

@@ -14,6 +14,7 @@ import ldp.example.com.android_demo.qqlogin.QQLogin_Activity;
 import ldp.example.com.android_demo.sendmessage.SendMessageActivity;
 import ldp.example.com.android_demo.wrisesdfile.WriteActivity;
 import ldp.example.com.android_demo.wrisesdfile.WriteSDfileActivity;
+import ldp.example.com.android_demo.xml_.XmlActivity;
 import ldp.example.com.android_demo.zidingyikj.circle;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_cun_chu;
     @ViewInject(R.id.btn_txt)
     private Button btn_txt;
+    @ViewInject(R.id.btn_xml_start)
+    private Button btn_xml;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_login.setOnClickListener(this);
         btn_cun_chu.setOnClickListener(this);
         btn_txt.setOnClickListener(this);
+        btn_xml.setOnClickListener(this);
     }
 
 
@@ -70,7 +74,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_txt://简单文件操作
                 start_txt();
                 break;
+            case R.id.btn_xml_start:
+                start_xml();
+                break;
         }
+    }
+
+    private void start_xml() {
+        startActivity(new Intent(MainActivity.this,
+                XmlActivity.class));
     }
 
     private void start_txt() {
