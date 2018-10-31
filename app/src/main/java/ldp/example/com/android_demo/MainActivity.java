@@ -12,6 +12,7 @@ import org.xutils.x;
 import ldp.example.com.android_demo.callphone.CallphoneActivity;
 import ldp.example.com.android_demo.qqlogin.QQLogin_Activity;
 import ldp.example.com.android_demo.sendmessage.SendMessageActivity;
+import ldp.example.com.android_demo.wrisesdfile.ShaerdPreferncesActivity;
 import ldp.example.com.android_demo.wrisesdfile.WriteActivity;
 import ldp.example.com.android_demo.wrisesdfile.WriteSDfileActivity;
 import ldp.example.com.android_demo.xml_.XmlActivity;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_txt;
     @ViewInject(R.id.btn_xml_start)
     private Button btn_xml;
+    @ViewInject(R.id.btn_SharedPreferences)
+    private Button btn_sharedpreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_cun_chu.setOnClickListener(this);
         btn_txt.setOnClickListener(this);
         btn_xml.setOnClickListener(this);
+        btn_sharedpreferences.setOnClickListener(this);
     }
 
 
@@ -77,7 +81,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_xml_start:
                 start_xml();
                 break;
+            case R.id.btn_SharedPreferences:
+                start_sharedpreferences_Activity();
         }
+    }
+
+    private void start_sharedpreferences_Activity() {
+        startActivity(new Intent(MainActivity.this,
+                ShaerdPreferncesActivity.class));
     }
 
     private void start_xml() {
