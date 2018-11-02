@@ -100,10 +100,11 @@ public class XmlActivity extends BaseActivity {
                 public void hasPermission() {
                     // 1  创建一个xml文件的序列号器
                     XmlSerializer serializer = Xml.newSerializer();
-                    // 2  设置文件输出和编码方式
+
                     FileOutputStream fos = null;
                     try {
                         fos = new FileOutputStream(new File(Environment.getExternalStorageDirectory(), "myinfo.xml"));
+                        // 2  设置文件输出和编码方式
                         serializer.setOutput(fos,"utf-8");
                         // 3  写入xml文件的头
                         serializer.startDocument("utf-8",true);

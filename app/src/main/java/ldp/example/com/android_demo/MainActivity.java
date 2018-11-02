@@ -10,8 +10,10 @@ import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 import ldp.example.com.android_demo.callphone.CallphoneActivity;
+import ldp.example.com.android_demo.json.JsonActivity;
 import ldp.example.com.android_demo.qqlogin.QQLogin_Activity;
 import ldp.example.com.android_demo.sendmessage.SendMessageActivity;
+import ldp.example.com.android_demo.sqllitedemo.SqlActivity;
 import ldp.example.com.android_demo.wrisesdfile.ShaerdPreferncesActivity;
 import ldp.example.com.android_demo.wrisesdfile.WriteActivity;
 import ldp.example.com.android_demo.wrisesdfile.WriteSDfileActivity;
@@ -36,6 +38,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_xml;
     @ViewInject(R.id.btn_SharedPreferences)
     private Button btn_sharedpreferences;
+    @ViewInject(R.id.bt_json)
+    private Button btn_json;
+    @ViewInject(R.id.btn_sqlite)
+    private Button btn_SQLite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_txt.setOnClickListener(this);
         btn_xml.setOnClickListener(this);
         btn_sharedpreferences.setOnClickListener(this);
+        btn_json.setOnClickListener(this);
+        btn_SQLite.setOnClickListener(this);
     }
 
 
@@ -78,12 +86,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_txt://简单文件操作
                 start_txt();
                 break;
-            case R.id.btn_xml_start:
+            case R.id.btn_xml_start://xml文件
                 start_xml();
                 break;
-            case R.id.btn_SharedPreferences:
+            case R.id.btn_SharedPreferences://sharedpreferences
                 start_sharedpreferences_Activity();
+                break;
+            case R.id.bt_json://json
+                startJson();
+            case R.id.btn_sqlite:
+                startSQLite();
+                break;
         }
+    }
+
+    private void startSQLite() {
+        startActivity(new Intent(MainActivity.this,
+                SqlActivity.class));
+    }
+
+    private void startJson() {
+        startActivity(new Intent(MainActivity.this,
+                JsonActivity.class));
     }
 
     private void start_sharedpreferences_Activity() {
@@ -112,17 +136,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void start_zdy_view() {
-        Intent intent = new Intent(MainActivity.this, circle.class);
+        Intent intent = new Intent(MainActivity.this,
+                circle.class);
         startActivity(intent);
     }
 
     private void start_send_message() {
-        Intent intent = new Intent(MainActivity.this, SendMessageActivity.class);
+        Intent intent = new Intent(MainActivity.this,
+                SendMessageActivity.class);
         startActivity(intent);
     }
 
     private void start_call_phone() {
-        Intent intent = new Intent(MainActivity.this, CallphoneActivity.class);
+        Intent intent = new Intent(MainActivity.this,
+                CallphoneActivity.class);
         startActivity(intent);
     }
 

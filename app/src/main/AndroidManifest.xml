@@ -25,9 +25,7 @@
         <activity
             android:name=".callphone.CallphoneActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".sendmessage.SendMessageActivity"
             android:launchMode="singleTask"
@@ -39,9 +37,7 @@
         <activity
             android:name=".qqlogin.QQLogin_Activity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".utils.BaseActivity"
             android:launchMode="singleTask"
@@ -52,18 +48,14 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".wrisesdfile.WriteActivity"
-            android:launchMode="singleTask">
-
-        </activity>
+            android:launchMode="singleTask" />
         <activity
             android:name=".xml_.XmlActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".wrisesdfile.ShaerdPreferncesActivity">
-
-        </activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".wrisesdfile.ShaerdPreferncesActivity" />
+        <activity android:name=".json.JsonActivity" />
+        <activity android:name=".sqllitedemo.SqlActivity"></activity>
     </application>
 
 </manifest>
