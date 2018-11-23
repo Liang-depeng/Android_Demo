@@ -3,6 +3,7 @@ package ldp.example.com.android_demo.wrisesdfile;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -78,6 +79,7 @@ public class WriteActivity extends AppCompatActivity {
         File file = new File(getFilesDir(),"info_.txt");
         if(file.exists()){
             file.delete();
+            Log.d("xxx","删除成功");
             Toast.makeText(WriteActivity.this,"文件删除成功",Toast.LENGTH_SHORT).show();
         }else {
             Toast.makeText(WriteActivity.this,"文件不存在",Toast.LENGTH_SHORT).show();

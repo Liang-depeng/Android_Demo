@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".MyApplication"
@@ -24,8 +27,7 @@
         </activity>
         <activity
             android:name=".callphone.CallphoneActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:launchMode="singleTask" />
         <activity
             android:name=".sendmessage.SendMessageActivity"
             android:launchMode="singleTask"
@@ -55,7 +57,14 @@
             android:screenOrientation="portrait" />
         <activity android:name=".wrisesdfile.ShaerdPreferncesActivity" />
         <activity android:name=".json.JsonActivity" />
-        <activity android:name=".sqllitedemo.SqlActivity"></activity>
+        <activity android:name=".sqllitedemo.SqlActivity" />
+        <activity android:name=".contentprovider.ContentProviderActivity" />
+        <activity
+            android:name=".callphone.DialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".dialog.DialogsActivity" />
+        <activity android:name=".task.AsynctaskActivity" />
+        <activity android:name=".http.HttpActivity"></activity>
     </application>
 
 </manifest>

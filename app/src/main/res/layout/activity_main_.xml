@@ -61,7 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SharedPreferences"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/bt_json"
@@ -77,12 +78,27 @@
             android:textSize="15sp"/>
 
         <Button
+            android:id="@+id/btn_content_provider"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="内容提供者"/>
 
         <Button
+            android:id="@+id/btn_dialog"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Dialog"
+            android:textAllCaps="false"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btn_http"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简单 http"
+            android:textAllCaps="false"
+            android:textSize="15sp"/>
     </LinearLayout>
 
 </ScrollView>

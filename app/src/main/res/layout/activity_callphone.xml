@@ -20,4 +20,10 @@
         android:text="呼 叫"
         android:textSize="15dp"/>
 
+    <Button
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动对话框活动"/>
+
 </LinearLayout>

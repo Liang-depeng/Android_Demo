@@ -100,8 +100,14 @@ public class SqlActivity extends AppCompatActivity implements View.OnClickListen
             if (TextUtils.isEmpty(name)){
                 Toast.makeText(this,"信息不能为空",Toast.LENGTH_SHORT).show();
             }else {
-                resultTxt.setText(mStudentDao.SQLite_query(name));
-                Toast.makeText(this,"信息更新成功",Toast.LENGTH_SHORT).show();
+
+                if (mStudentDao.SQLite_query(name)==null){
+                    Toast.makeText(this,"信息不存在",Toast.LENGTH_SHORT).show();
+                }else {
+                    resultTxt.setText(mStudentDao.SQLite_query(name));
+                    Toast.makeText(this,"信息查询成功",Toast.LENGTH_SHORT).show();
+                }
+
             }
         }
     }

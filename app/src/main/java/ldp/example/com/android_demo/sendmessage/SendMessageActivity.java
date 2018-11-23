@@ -7,6 +7,7 @@ import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import org.xutils.view.annotation.ViewInject;
@@ -26,6 +27,8 @@ public class SendMessageActivity extends BaseActivity {
     private EditText send_message;
     @ViewInject(R.id.btn_send)
     private Button btn_send;
+    @ViewInject(R.id.s_progressBar)
+    private ProgressBar mProgressBar;
     private String mPhone;
     private String mMessages;
 
@@ -34,8 +37,19 @@ public class SendMessageActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sendmessage);
         x.view().inject(this);
-
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    Thread.sleep(10000);
+//                    mProgressBar.setVisibility(View.GONE);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }).start();
         btn_send.setOnClickListener(new MySmsOnClickListener());
+
     }
 
     private class MySmsOnClickListener implements View.OnClickListener {
